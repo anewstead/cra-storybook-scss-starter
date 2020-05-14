@@ -1,0 +1,9 @@
+{
+  "extends": ["react-app", "eslint-config-prettier"],
+  "rules": {
+    "arrow-body-style": ["error", "always"],
+    "arrow-parens": ["error", "always"],
+    "no-confusing-arrow": ["error", { "allowParens": true }],
+    "no-mixed-operators": "error"
+  }
+}

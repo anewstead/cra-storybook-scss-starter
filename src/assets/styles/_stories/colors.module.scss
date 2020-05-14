@@ -1,0 +1,66 @@
+@mixin paletteBlock() {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  margin-right: 0.5em;
+}
+
+.brand::before {
+  @include paletteBlock();
+  background-color: $brand;
+}
+
+.grey-1::before {
+  @include paletteBlock();
+  background-color: $grey-1;
+}
+
+.grey-2::before {
+  @include paletteBlock();
+  background-color: $grey-2;
+}
+
+.grey-3::before {
+  @include paletteBlock();
+  background-color: $grey-3;
+}
+
+.grey-4::before {
+  @include paletteBlock();
+  background-color: $grey-4;
+}
+
+.color-type-body::before {
+  @include paletteBlock();
+  background-color: $grey-2;
+}
+
+.success::before {
+  @include paletteBlock();
+  background-color: $success;
+}
+
+.atenttion::before {
+  @include paletteBlock();
+  background-color: $atenttion;
+}
+
+.wait::before {
+  @include paletteBlock();
+  background-color: $wait;
+}
+
+.error::before {
+  @include paletteBlock();
+  background-color: $error;
+}
+
+.base-font-family {
+  font-family: $base-font-family;
+}
+
+.headers-font-family {
+  font-family: $headers-font-family;
+}
