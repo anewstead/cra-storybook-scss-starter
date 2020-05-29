@@ -1,10 +1,10 @@
 // https://medium.com/@dmitriy.borodiy/easy-color-theming-with-scss-bc38fd5734d1
-@mixin themify($themes: $themes) {
-  @each $theme, $map in $themes {
-    .theme-#{$theme} & {
+@mixin themify($themeObj) {
+  @each $theme, $map in $themeObj {
+    :global(.theme-#{$theme}) & {
       $theme-map: () !global;
       @each $key, $submap in $map {
-        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $value: map-get(map-get($themeObj, $theme), '#{$key}');
         $theme-map: map-merge(
           $theme-map,
           (
@@ -12,7 +12,6 @@
           )
         ) !global;
       }
-
       @content;
       $theme-map: null !global;
     }
